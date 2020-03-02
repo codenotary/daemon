@@ -192,7 +192,7 @@ func (linux *systemDRecord) Status() (string, error) {
 	}
 
 	if !linux.isInstalled() {
-		return "Status could not defined", ErrNotInstalled
+		return statNotInstalled, ErrNotInstalled
 	}
 
 	statusAction, _ := linux.checkRunning()
