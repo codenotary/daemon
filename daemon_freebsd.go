@@ -103,6 +103,7 @@ func (bsd *bsdRecord) checkRunning() (string, bool) {
 
 // Install the service
 func (bsd *bsdRecord) Install(args ...string) (string, error) {
+	var err error
 	installAction := "Install " + bsd.description + ":"
 
 	if ok, err := checkPrivileges(); !ok {
